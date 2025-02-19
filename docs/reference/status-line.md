@@ -40,7 +40,7 @@ set -g @gruvbox_[module_name]_text "text"
 ### Override the specific module's background color
 
 ```sh
-set -g @gruvbox_status_[module_name]_bg_color "#{@thm_surface_0}"
+set -g @gruvbox_status_[module_name]_bg_color "#{@thm_bg3}"
 ```
 
 ### Removing a specific module option
@@ -193,16 +193,16 @@ Add the following to your `~/.gitmux.conf` so that it uses gruvbox colors:
 ```yaml
 tmux:
     styles:
-        clear: '#[fg=#{@thm_fg}]'
+        clear: '#[fg=#{@thm_fg}]#[bg=#{@thm_bg}]'
         state: '#[fg=#{@thm_red},bold]'
         branch: '#[fg=#{@thm_fg},bold]'
-        remote: '#[fg=#{@thm_teal}]'
+        remote: '#[fg=#{@thm_aqua}]'
         divergence: '#[fg=#{@thm_fg}]'
         staged: '#[fg=#{@thm_green},bold]'
         conflict: '#[fg=#{@thm_red},bold]'
         modified: '#[fg=#{@thm_yellow},bold]'
         untracked: '#[fg=#{@thm_purple},bold]'
-        stashed: '#[fg=#{@thm_blue_two},bold]'
+        stashed: '#[fg=#{@thm_blue2},bold]'
         clean: '#[fg=#{@thm_orange},bold]'
         insertions: '#[fg=#{@thm_green}]'
         deletions: '#[fg=#{@thm_red}]'
@@ -235,7 +235,7 @@ run '~/.tmux/plugins/tpm/tpm'
 
 ```sh
 set -g @gruvbox_kube_context_color "#{@thm_red}"
-set -g @gruvbox_kube_namespace_color "#{@thm_blue_two}"
+set -g @gruvbox_kube_namespace_color "#{@thm_blue2}"
 
 run ~/.config/tmux/plugins/gruvbox/tmux/gruvbox.tmux
 

@@ -8,7 +8,7 @@ You can add arbitrary things to the status line like so:
 ```sh
 # ~/.tmux.conf
 
-set -agF status-right "#[fg=#{@thm_crust},bg=#{@thm_teal}] ##H "
+set -agF status-right "#[fg=#{@thm_bg0_h},bg=#{@thm_aqua}] ##H "
 ```
 
 This will append the current hostname (`#H`) to the status line with a teal
@@ -17,9 +17,9 @@ background and dark black text.
 You can also use icons for styling, for example to show the used memory percentage
 on MacOS:
 
-```sh  
-set -g status-right "#[bg=#{@thm_red_two},fg=#{@thm_crust}]#[reverse]#[noreverse]󱀙  "
-set -ag status-right "#[fg=#{@thm_fg},bg=#{@thm_mantle}] #(memory_pressure | awk '/percentage/{print $5}') "
+```sh
+set -g status-right "#[bg=#{@thm_red2},fg=#{@thm_bg0_h}]#[reverse]#[noreverse]󱀙  "
+set -ag status-right "#[fg=#{@thm_fg},bg=#{@thm_bg}] #(memory_pressure | awk '/percentage/{print $5}') "
 ```
 
 ![Example of the custom ram module](../../assets/ram-example.webp)
@@ -32,7 +32,7 @@ To use the status module formatting that gruvbox uses, do the following:
 %hidden MODULE_NAME="my_custom_module"
 
 set -ogq "@gruvbox_${MODULE_NAME}_icon" " "
-set -ogqF "@gruvbox_${MODULE_NAME}_color" "#{E:@thm_purple_two}"
+set -ogqF "@gruvbox_${MODULE_NAME}_color" "#{E:@thm_purple2}"
 set -ogq "@gruvbox_${MODULE_NAME}_text" "#{pane_current_command}"
 
 source "<path to gruvbox plugin>/utils/status_module.conf"

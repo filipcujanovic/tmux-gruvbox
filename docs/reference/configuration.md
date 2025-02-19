@@ -62,35 +62,35 @@ set -g @gruvbox_window_right_separator ""
 
 ```sh
 # Use a value compatible with the standard tmux `menu-selected-style`
-set -g @gruvbox_menu_selected_style "fg=#{@thm_surface_0},bg=#{@thm_yellow}"
+set -g @gruvbox_menu_selected_style "fg=#{@thm_bg3},bg=#{@thm_yellow}"
 ```
 
 ### All options and their defaults
 
 ```bash
 # Menu styling options
-set -ogq @gruvbox_menu_selected_style "fg=#{@thm_fg},bold,bg=#{@thm_overlay_0}"
+set -ogq @gruvbox_menu_selected_style "fg=#{@thm_fg},bold,bg=#{@thm_bg0}"
 
 # Pane styling options
 set -ogq @gruvbox_pane_status_enabled "no" # set to "yes" to enable
 set -ogq @gruvbox_pane_border_status "off" # set to "yes" to enable
-set -ogq @gruvbox_pane_border_style "fg=#{@thm_overlay_0}"
+set -ogq @gruvbox_pane_border_style "fg=#{@thm_bg0}"
 set -ogq @gruvbox_pane_active_border_style "##{?pane_in_mode,fg=#{@thm_gray},##{?pane_synchronized,fg=#{@thm_purple},fg=#{@thm_gray}}}"
 set -ogq @gruvbox_pane_left_separator "█"
 set -ogq @gruvbox_pane_middle_separator "█"
 set -ogq @gruvbox_pane_right_separator "█"
 set -ogq @gruvbox_pane_color "#{@thm_green}"
-set -ogq @gruvbox_pane_background_color "#{@thm_surface_0}"
+set -ogq @gruvbox_pane_background_color "#{@thm_bg3}"
 set -ogq @gruvbox_pane_default_text "##{b:pane_current_path}"
 set -ogq @gruvbox_pane_default_fill "number"
 set -ogq @gruvbox_pane_number_position "left" # right, left
 
 set -ogq @gruvbox_window_status_style "basic" # basic, rounded, slanted, custom, or none
-set -ogq @gruvbox_window_text_color "#{@thm_surface_0}"
-set -ogq @gruvbox_window_number_color "#{@thm_overlay_2}"
+set -ogq @gruvbox_window_text_color "#{@thm_bg3}"
+set -ogq @gruvbox_window_number_color "#{@thm_bg2}"
 set -ogq @gruvbox_window_text " #T"
 set -ogq @gruvbox_window_number "#I"
-set -ogq @gruvbox_window_current_text_color "#{@thm_surface_1}"
+set -ogq @gruvbox_window_current_text_color "#{@thm_bg4}"
 set -ogq @gruvbox_window_current_number_color "#{@thm_purple}"
 set -ogq @gruvbox_window_current_text " #T"
 set -ogq @gruvbox_window_current_number "#I"
@@ -112,5 +112,5 @@ set -ogq @gruvbox_status_middle_separator ""
 set -ogq @gruvbox_status_right_separator "█"
 set -ogq @gruvbox_status_connect_separator "yes" # yes, no
 set -ogq @gruvbox_status_fill "icon"
-set -ogq @gruvbox_status_module_bg_color "#{@thm_surface_0}"
+set -ogq @gruvbox_status_module_bg_color "#{@thm_bg3}"
 ```
