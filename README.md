@@ -63,7 +63,7 @@ This method is recommended as TPM has some issues with name conflicts.
 
    ```bash
    mkdir -p ~/.config/tmux/plugins/gruvbox
-   git clone -b v2.1.2 https://github.com/gruvbox/tmux.git ~/.config/tmux/plugins/gruvbox/tmux
+   git clone -b v1.0.0 https://github.com/gruvbox/tmux.git ~/.config/tmux/plugins/gruvbox/tmux
    ```
 
 1. Add the following line to your `tmux.conf` file:
@@ -81,7 +81,7 @@ Check out what to do next in the "[Getting Started Guide](./docs/tutorials/01-ge
 1.  Add the gruvbox plugin:
 
     ```bash
-    set -g @plugin 'gruvbox/tmux#v2.1.2' # See https://github.com/gruvbox/tmux/tags for additional tags
+    set -g @plugin 'gruvbox/tmux#v1.0.0' # See https://github.com/gruvbox/tmux/tags for additional tags
     # ...alongside
     set -g @plugin 'tmux-plugins/tpm'
     ```
